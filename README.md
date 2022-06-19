@@ -1,7 +1,9 @@
+
+
 ## 簡介
 簡易餐廳清單，可以瀏覽餐廳、點擊查看詳細資訊、搜尋餐廳名稱與種類。
 
-**bold text**
+
 
 ## 功能
 * 瀏覽所有餐廳
@@ -9,7 +11,7 @@
 * 連結餐廳的地址到 Google 地圖
 * 搜尋特定餐廳
 
-**bold text**
+
 
 ## 開始使用
 1. 請先安裝 node.js 與 npm 將專案 clone 到本地
@@ -31,7 +33,6 @@ Listening on http://localhost:3000
 ctrl + c
 ```
 
-**bold text**
 
 ## 開發工具
 * Node.js @16.15.0
