@@ -17,10 +17,9 @@ app.get('/',(req, res) => {
 
 // routes setting "search"
 app.get('/search',(req, res) => {
-  const keyword = req.query.keyword
+  const keyword = req.query.keyword.trim()
   const restaurants = restaurantList.results.filter(restaurant => {
-    return restaurant.name.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase())
-   
+    return  restaurant.name.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase())  
   })
   res.render('index', { restaurants: restaurants })
 })
@@ -34,5 +33,5 @@ app.get('/restaurants/:restaurant_id', (req, res) => {
 
 // start and listen on the Express server
 app.listen(port, () => {
-
+  console.log(`App is running on http://localhost:${port}`)
 })
