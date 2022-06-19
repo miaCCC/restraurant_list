@@ -21,9 +21,8 @@
 <!-- restaurant list -->
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-20 col-12 mx-auto">
-      <div class="card-columns">
-        {{#each restaurants}}
+    {{#each restaurants}}
+     <div class="col-12 col-sm-6 col-md-4">
         <a href="/restaurants/{{this.id}}" class="text-secondary">
           <div class="card mb-3">
             <img class="card-img-top" src="{{this.image}}"
@@ -36,16 +35,15 @@
               </div>
 
               <span class="badge badge-pill badge-danger font-weight-normal">
-                4.1
+                {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
 
             </div>
           </div>
         </a>
-        {{/each}}
-        
       </div>
-    </div>
+    {{/each}}
   </div>
 </div>
+
